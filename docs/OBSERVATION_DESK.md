@@ -24,8 +24,7 @@ from its possible cause, and exports an illustrated brief with actual acquisitio
   actual inventory, alignment limits, historical ALX2 mismatch, primary references and generated-art contribution disclosure.
 - SHA-256 checks compare selected preview bytes with the local audit manifest. This checks bundled file consistency,
   not authenticity, field validation, scientific accuracy or OTS proof verification.
-- Delta Dispatch opens Echo's actual archive uplink when the fictional date puzzle is completed. Real pairs can be saved
-  in a separate journal pocket and opened in Inspect. The game bridge and gauge never validate the actual imagery.
+- A Changing Frontier lets Astrounit guide the visitor through recorded dates and into Inspect. Its selected acquisition pair is carried into the existing workspace without a page reload. Illustrations do not validate the actual imagery.
 - The optional `study.html` facilitator kit records an anonymous, permission-based observer session, task outcomes,
   active time and assistance. It starts empty, stays local and exports JSON. No participant feedback or learning results
   have been invented. The isolated QA fixture is not a usability study.
@@ -52,7 +51,7 @@ It does not overwrite the bundled real observations or establish their external 
 - All **222 bundled files** matched the generated integrity/metadata manifest.
 - Browser: saved observations survived reload; swipe range and image pins worked with keyboard; side-by-side and
   manually controlled blink worked; the selected later date opened on the actual map with playback stopped.
-- Browser: Echo's archive accepted a real 20 July–18 September pair, saved it separately from game epochs and carried
+- Historical browser check for the retired adventure: its archive accepted a real 20 July–18 September pair and carried
   those exact dates to Inspect. The mid-mission checkpoint was an explicitly isolated QA fixture.
 - Browser: the HTML export contained both actual embedded previews and product IDs. Its content was inspected locally;
   opening a downloaded `file:` URL in the automation browser was blocked by that browser's protocol policy, so

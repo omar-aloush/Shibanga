@@ -1,7 +1,7 @@
 import { downloadFile } from './science.js?v=10.0';
 const KEY='fringe.observer.v1',tasks=[
   ['journey','Begin the Journey. Find the real observation view.','Observe whether the participant reaches the actual NISAR dates and distinguishes illustration from observation.'],
-  ['mission','Explore Delta Dispatch and complete the field mission.','Record whether movement, scanning, date pairing and the gauge can be used. Assistance is allowed and must be recorded.'],
+  ['mission','Explore A Changing Frontier and follow the field mission.','Record whether story navigation, actual-date comparison, scout movement and the handoff to Inspect can be used. Record any assistance.'],
   ['timeline','On the real map, select a different acquisition date and change the layer.','Observe actual timeline and layer use.'],
   ['source','Find the acquisition date, source and one limitation for the displayed data.','Record whether the participant finds Details & Sources and can distinguish a preview from a measurement.'],
   ['investigation','In Inspect, compare two actual dates, save an observation and export a brief.','Observe completion and whether the exported brief can be opened. Do not grade a scientific conclusion.'],

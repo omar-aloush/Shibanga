@@ -30,17 +30,12 @@ assistance and contradictory feedback as carefully as successes. Report actual c
 For a separate resource-manager interview, ask which decision they make, their current tool, needed resolution/update interval,
 and the independent evidence they would require. Use observed problems to improve the interface and repeat only affected tasks.
 
-## Delta Dispatch game extension
+## A Changing Frontier field mission
 
-Use the same anonymous, consent-based session approach. Observe 5–8 novices where feasible; this is a target sample, not completed research.
-Start from #game without demonstrating the solution. Let participants discover movement, scan the clouds, pair both visits,
-read the field record and return to the station. Record any assistance, including Follow Echo, separately from unassisted play.
-Then ask them to change a real acquisition date in the finale, open the explorer, switch layer and find its source.
+Start from a fresh visit or Guide’s mission briefing without demonstrating the controls. Observe story navigation, recorded-visit comparison, deployment into the shared map, Astrounit movement, arrival stories, Walk / Inspect, follow controls and the handoff into Inspect. Use `#game` for a pilot-only task. Record all assistance separately.
 
 ```csv
-participant_code,prior_game_experience,english_reading_comfort,found_movement,found_scan,paired_both_dates,completed_mission,completion_seconds,used_follow_echo,help_requests,recognized_fictional_case,changed_real_date,found_actual_source,main_obstacle,enjoyment_comment
+participant_code,english_reading_comfort,started_story,compared_recorded_dates,distinguished_illustration,found_map_signal,opened_inspect,found_actual_source,help_requests,main_obstacle,enjoyment_comment
 ```
 
-Success is observable state: both surveys are captured, the field check is collected, the case is delivered, and the actual date/source is found.
-Ask participants to explain the boundary between game readings and real NISAR, and why a colour alone is insufficient for a flood claim.
-Keep verbatim enjoyment comments only with permission; do not convert a small convenience sample into a population-wide learning claim.
+Success is observable navigation and correct identification of dates/sources. Ask what an image difference can establish and what independent check would be needed. This is a protocol, not a completed study or evidence of learning outcomes.

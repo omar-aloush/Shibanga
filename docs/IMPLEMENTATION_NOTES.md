@@ -1,6 +1,6 @@
 # Fringe — See the Unseen, 7 November 2026
 
-Update: Delta Dispatch is now also implemented. See `GAME_IMPLEMENTATION.md` for the playable game and the current **42-test** combined suite. The journey-specific verification below records its earlier delivery.
+Update, 9 November 2026: A Changing Frontier is now the opening field mission and replaces the former pixel adventure. See `GAME_IMPLEMENTATION.md`. The journey-specific verification below records an earlier delivery.
 
 ## Implemented journey
 

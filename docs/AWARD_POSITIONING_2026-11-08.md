@@ -8,7 +8,7 @@ It is stronger to demonstrate that path clearly than to bolt on unrelated featur
 
 | Direction | What the finished web app demonstrates | Evidence still needed |
 |---|---|---|
-| Art & Technology | Original illustrated Journey, procedural pixel world, movement/collision, Echo, paired-date puzzle, ambient sound and actual-data transition | Real audience reaction, final presentation and contribution disclosure |
+| Art & Technology | Original illustrated Journey, cinematic field mission, Astrounit guide, dated radar comparison, real-map exploration and actual-data transition | Real audience reaction, final presentation and contribution disclosure |
 | Best Use of Storytelling | A lost signal becomes a paired observation, then a field check; the story leads into actual product dates and an investigation brief | Observe whether first-time users understand and complete that transition |
 | Best Use of Data | Real provisional archive, product IDs, date-aware comparison, complete residuals/baseline, provenance, reproducible exports and file audit | A stronger independently validated scientific case would materially strengthen this direction |
 | Best Use of Technology | Buildless browser app, procedural rendering/audio, keyboard/touch routes, safe local notebook and portable reports | Demonstrate a distinctive technical benefit and measured performance on real devices |
@@ -37,7 +37,7 @@ Primary sources, checked during this review:
 
 1. **0:00–0:25** — The human problem: people see radar colours but need dates, context and a way to check an interpretation.
 2. **0:25–1:05** — Show actual play: movement, scanning, A/B pairing and the fictional field check. Label any edited time compression.
-3. **1:05–1:35** — Echo opens the actual archive. Save a real pair, move into Inspect, swipe and pin a visible pattern.
+3. **1:05–1:35** — Astrounit guides a recorded-date comparison. Move into Inspect, swipe and pin a visible pattern.
 4. **1:35–2:05** — Save a visual observation separately from its hypothesis and next check. Download the portable brief.
 5. **2:05–2:35** — Show acquisition IDs, historical GNSS limits and the full unresolved station comparison. Explain what further evidence is needed.
 6. **2:35–3:00** — State the intended audience, what works today, what was actually tested and the next real-user/validation step.

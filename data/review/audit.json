@@ -6,7 +6,7 @@
     "uniqueGUNWPairs": 93,
     "fullGUNWPairs": 9,
     "gcovPreviews": 9,
-    "files": 222
+    "files": 224
   },
   "findings": {
     "evidenceRecordsChecked": 10,
@@ -128,6 +128,16 @@
       "path": "data/evidence/evidence-svartsengi.ots",
       "bytes": 1308,
       "sha256": "46d968c24e677b53c37914262e97eefee7e31c189d94976f37a3b5cef59bad55"
+    },
+    {
+      "path": "data/geography/README.md",
+      "bytes": 2542,
+      "sha256": "331a4102ebef3e509e944ba868311f21ff6ac806f80f651ea11a99f67e2aa1c4"
+    },
+    {
+      "path": "data/geography/atlas.json",
+      "bytes": 8162942,
+      "sha256": "615e187d9ce5eec424b4d860b94e65543ed9e61c9e64ef389ff5fe84579d0671"
     },
     {
       "path": "data/gnss/campi-flegrei-FRUL.json",
@@ -1130,5 +1140,5 @@
       "sha256": "8ec515296871b5eacf45680edb2b6bfcc6163ce78035a8fbd40cce5963e9f17d"
     }
   ],
-  "generatedAt": "2026-11-08T12:37:59.684677+00:00"
+  "generatedAt": "2026-11-09T00:53:14.372818+00:00"
 }

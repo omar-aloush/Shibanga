@@ -1,25 +1,12 @@
-# Delta Dispatch — suggested demo, not an official duration requirement
+# A Changing Frontier — demonstration
 
-Suggested spoken script, about 75–100 seconds with short genuine gameplay clips. Confirm the actual submission guide before recording.
+1. Open the app on a fresh visit, or replay the mission briefing from Guide. Introduce Astrounit and start the eight-scene story.
+2. Reveal a recorded NISAR visit, then drag the dated comparison. Explain that qualitative preview differences are clues.
+3. Change the illustrative model control, keeping its assumptions separate from measurements.
+4. Begin the field mission. The full explorer opens with Astrounit piloting on the Nile Delta. Move using WASD/arrows, touch or a map tap.
+5. Let the arrival introduction appear; show that the radar layer and date are unchanged. Try Walk / Inspect, drag the map to release following, then press Follow Astrounit.
+6. Use a place marker or Events to fast-travel to another documented story. Replay its introduction or open its full story and evidence.
+7. Return to the Nile Delta and choose Compare visits to open the actual indexed dates in Inspect. Keep an observation separate from its possible explanation and name the independent check needed.
+8. Turn the Map toolbar toggle off to resume normal exploration. Existing `index.html#game` links enter the same map in pilot mode.
 
-**Opening — 10 seconds**
-“Radar can reveal a changing surface through clouds. Interpreting that signal takes context. Fringe helps beginners practise that habit.”
-Show the original Delta Dispatch title, move the scout and introduce Echo.
-
-**Playable investigation — 20–30 seconds**
-“Find an echo, compare the same place twice, check it on the ground, then bring the evidence home.”
-Show actual movement/collision, a pulse revealing the relay, survey A/B changing the field, the restored bridge and the field gauge.
-Use edits between gameplay segments rather than pretending the complete mission happens instantly.
-
-**Fiction to real observations — 20 seconds**
-“The training case is fictional. Here are the actual NISAR previews over the Nile Delta.”
-Show the completed evidence pack and real HH/HV preview. Change an acquisition date, read its source and enter the map at that date.
-
-**Evidence and limits — 20 seconds**
-“The real explorer keeps product IDs, dates and limitations beside the data. Preview colours need verification.”
-Open Details & Sources and export the observation JSON. If discussing displacement accuracy, show the unresolved Central Valley comparison;
-do not call historical GNSS contemporary validation or browse colours a verified flood map.
-
-**Close — 5–10 seconds**
-State the audience and the next evidence-backed user task. Include only actual test/user results. Add accurate source and AI contribution
-credits. Do not claim guaranteed awards, fabricated adoption or work completed during a hackathon if it predates that event.
+No participant outcomes, scientific classification accuracy or official presentation duration are claimed.

@@ -1,6 +1,6 @@
 # Fringe — current project and submission notes
 
-Updated **8 November 2026**. This file supersedes `SPACE_APPS_2026.md` for current feature descriptions and pitch claims.
+Updated **9 November 2026**. This file supersedes `SPACE_APPS_2026.md` for current feature descriptions and pitch claims.
 It describes development completed before the hackathon. Do not present this work as having been built during the event.
 
 ## Project statement
@@ -11,14 +11,12 @@ station comparisons. See the Unseen introduces beginners through an English-only
 
 ## Working features
 
-- **Observation Desk / Inspect:** actual-date comparison, image pins, private local notebook, illustrated HTML brief and provenance JSON/CSV. Echo can carry real pairs from a separate archive pocket into this workspace.
+- **Observation Desk / Inspect:** actual-date comparison, image pins, private local notebook, illustrated HTML brief and provenance JSON/CSV. Astrounit carries selected recorded acquisition dates into this workspace.
 - **Data & methods / Validation:** complete station residuals and baseline, acquisition IDs, archive snapshot, historical-context limits, primary references and selected-file SHA-256 checks.
 - Optional local observer kit for collecting real anonymous usability sessions; no participant outcomes are claimed.
 
 - Web map, physics lab, dated satellite imagery, real NISAR phase previews and Nile Delta HH/HV previews.
-- **Delta Dispatch:** a playable top-down pixel adventure with movement/collision, Echo the companion guide, radar discovery,
-  a paired-date bridge puzzle, an independent field-check quest, optional notes, keyboard/touch/navigation assistance and local
-  checkpoints. The fictional case leads to actual dated NISAR previews, then the explorer at the chosen acquisition date.
+- **A Changing Frontier:** the primary eight-scene introduction with Astrounit, cinematic Earth artwork, dated NISAR comparison, illustrative models and real-map scout exploration. The briefing deploys Astrounit into the full explorer; arrival stories preserve the selected data and explicit evidence actions open existing tools. It replaces the former pixel adventure.
 - **See the Unseen:** original layered Delta artwork and a NISAR guide; cloud scanning; an explicitly illustrative
   phase model; real dated Delta previews; original Web Audio ambience; Timeline → Layers → Details & Sources tips.
   Free navigation, replay and skipping; no quizzes, scores or rewards. English only.
@@ -61,7 +59,7 @@ not award eligibility decisions, scoring weights or assurances of winning multip
 The following is a suggested structure, not an official duration or slide limit. Confirm the **2026** submission guide
 when it is released on 13 November.
 
-1. Open `#game`: show movement, Echo and the radar discovery. Pair surveys A/B, cross the restored bridge, check the field and return.
+1. Start A Changing Frontier on a fresh visit or from Guide, compare recorded dates, then pilot Astrounit on the full explorer. Existing `#game` links enter shared-map piloting directly.
 2. At mission completion, distinguish the fictional case from actual NISAR previews. Change a real date and continue to the map.
 3. Optionally open `#journey`: begin over the living illustrated Delta, then move the radar scan through clouds.
 4. Use the map guide over Timeline, Layers and Details & Sources; export an observation report.
@@ -94,7 +92,7 @@ The detailed eligibility inquiry is in `GLOBAL_AWARDS_REVIEW_AR_2026-11-07.md`; 
 ## AI/SI contribution disclosure to review
 
 OpenAI Codex was used to inspect the project and sources, implement and revise the English web journey, compose its Web Audio score,
-build the Delta Dispatch game rules, original code-native pixel world and UI, generate its original title key art with image_gen,
+build and later retire the earlier pixel adventure; create A Changing Frontier, its field guide poses and orbital artwork with image_gen,
 add shared evidence calculations and exports, improve evidence labels, update documentation, and run automated and
 browser checks. The pipeline tests use synthetic products; real-data summary checks use the bundled station rows.
 Original journey art was generated with the built-in OpenAI image_gen tool and compressed as WebP; full prompts and source paths are recorded in `web/assets/journey/ART_DIRECTION.md`. These checks do not independently validate every satellite measurement. The team should add its other tools and

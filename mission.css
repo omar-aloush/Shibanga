@@ -1,0 +1,11 @@
+.app[data-view="briefing"] #view-briefing{opacity:1;visibility:visible;transition:opacity .35s}
+.app[data-view="briefing"]>.tabbar{display:none}
+#view-briefing{overflow:hidden;background:#00101d}
+.field-mission-host{position:absolute;inset:0;display:block}
+.field-mission-host[hidden]{display:none}
+.jr-game-entry{display:inline-flex;gap:10px;align-items:center;min-height:48px;padding:12px 15px;color:#c9f7fc;background:#073445ab;border:1px solid #50d6eb61;border-radius:24px;font-size:11px}
+.jr-begin{flex-wrap:wrap;gap:12px}
+.guide-game-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:17px;padding-top:17px;border-top:1px solid #50d6eb47}
+.guide-game-cta b{display:block;color:#d5f6fc;font-size:15px;margin-bottom:5px}
+.guide-game-cta span{color:#aac4d0;font-size:11px;line-height:1.6}
+@media(max-width:860px){.guide-game-cta{flex-direction:column;align-items:flex-start}.jr-game-entry{min-height:46px;padding:10px 13px;font-size:10px}}

@@ -19,9 +19,10 @@
   <link rel="stylesheet" href="vendor/leaflet.css">
   <link rel="stylesheet" href="app.css?v=10.0">
   <link rel="stylesheet" href="learn.css?v=10.0">
-  <link rel="stylesheet" href="game.css?v=10.0">
+  <link rel="stylesheet" href="mission.css?v=13.0">
+  <link rel="stylesheet" href="scout.css?v=14.0">
   <link rel="stylesheet" href="investigate.css?v=10.0">
-  <link rel="modulepreload" href="learn.js?v=10.0">
+  <link rel="modulepreload" href="learn.js?v=11.0">
   <link rel="modulepreload" href="science.js?v=10.0">
 </head>
 <body>
@@ -49,6 +50,7 @@
         <button class="glass round tool" id="btn-me" aria-label="Show NISAR over my location"></button>
         <button class="glass round tool" id="btn-base" aria-label="Switch basemap"></button>
         <button class="glass round tool" id="btn-recenter" aria-label="Recenter on the selected site"></button>
+        <button class="glass tool scout-toggle" id="btn-astrounit" aria-label="Explore as Astrounit" aria-pressed="false"><span class="scout-toggle-icon" aria-hidden="true"></span><span>Explore as Astrounit</span></button>
         <div class="tool-pair glass">
           <button class="tool-flat" id="btn-zoom-in" aria-label="Zoom in"></button>
           <button class="tool-flat" id="btn-zoom-out" aria-label="Zoom out"></button>
@@ -153,7 +155,7 @@
     </section>
 
     <!-- ===================== CINEMATIC JOURNEY ===================== -->
-    <section class="view" id="view-game" aria-label="Delta Dispatch exploration game"><div id="delta-game"></div></section>
+    <section class="view" id="view-briefing" aria-label="A Changing Frontier field mission"><div id="field-mission"></div></section>
     <section class="view" id="view-journey" aria-label="See the Unseen cinematic field guide">
       <div id="journey"></div>
     </section>
@@ -171,14 +173,12 @@
       <button class="tab" role="tab" data-view="map" aria-selected="true"><span class="tab-icon" data-icon="map"></span><span>Map</span></button>
       <button class="tab" role="tab" data-view="events" aria-selected="false"><span class="tab-icon" data-icon="list"></span><span>Events</span></button>
       <button class="tab" role="tab" data-view="journey" aria-selected="false"><span class="tab-icon" data-icon="sparkle"></span><span>Journey</span></button>
-      <button class="tab" role="tab" data-view="game" aria-selected="false"><span class="tab-icon" data-icon="gamepad"></span><span>Play</span></button>
-      <button class="tab" role="tab" data-view="investigate" aria-selected="false"><span class="tab-icon" data-icon="crosshair"></span><span>Inspect</span></button>
       <button class="tab" role="tab" data-view="lab" aria-selected="false"><span class="tab-icon" data-icon="activity"></span><span>Lab</span></button>
       <button class="tab" role="tab" data-view="guide" aria-selected="false"><span class="tab-icon" data-icon="book"></span><span>Guide</span></button>
     </nav>
   </div>
 
   <script src="vendor/leaflet.js"></script>
-  <script type="module" src="app.js?v=10.0"></script>
+  <script type="module" src="app.js?v=14.0"></script>
 </body>
 </html>

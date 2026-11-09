@@ -1,13 +1,13 @@
 # Fringe — See the Unseen
 
-An English-language NISAR explorer connecting a cinematic introduction, a real pixel exploration game and a transparent observation desk.
+An English-language NISAR explorer connecting a cinematic introduction, the A Changing Frontier field mission and a transparent observation desk.
 
 ## Try it locally
 
 This repository is the web root. No JavaScript installation or build is required.
 
 ```sh
-python -m http.server 5173 --bind 127.0.0.1
+python3 -m http.server 5173 --bind 127.0.0.1
 ```
 
 Open `http://127.0.0.1:5173/`.
@@ -15,13 +15,13 @@ Open `http://127.0.0.1:5173/`.
 | Section | Working experience |
 |---|---|
 | Journey | Original 2.5D Delta art, user-controlled radar/time scenes, optional original ambient sound and a real-map introduction |
-| Play | Delta Dispatch: movement, collisions, Echo, scanning, paired-date bridge puzzle, a fictional field check, notes and checkpoints |
+| Briefing | A Changing Frontier: eight story scenes, recorded-date comparison and an illustrative model; replay from Guide |
 | Inspect | Actual NISAR date comparison, swipe/side-by-side/manual blink, image pins, local notebook and illustrated HTML/JSON/CSV exports |
-| Map & Events | Real provisional radar previews, derived LOS, historical GNSS context, cited stories and dated satellite imagery |
+| Map & Events | One full explorer with optional Astrounit piloting, regional stories across thousands of states/provinces and named landscapes, real radar previews, historical GNSS context and dated imagery |
 | Lab | Illustrative interference models for exploring the radar mechanism |
 | Guide | Explanations, sources, replay and an optional anonymous observer kit |
 
-Echo's archive uplink connects actual acquisition dates to Inspect while keeping game readings explicitly fictional.
+The briefing deploys Astrounit into the explorer’s existing map. Toggle **Explore as Astrounit** in Map tools, move with WASD/arrows, touch or map taps, and switch Walk / Inspect to use the existing probes. Regional stories follow the astronaut’s actual location, with source links, Read aloud and optional longer excerpts. They preserve the selected layer and date; Find radar here opens the existing catalogue for that position. Legacy `#game` links open this shared pilot mode.
 The Validation and Data & methods panels expose the full station sample, zero-motion baseline, provenance and limits.
 Shared comparison links contain dates/pins, never private notebook text. Notes stay on the device until exported.
 
@@ -29,12 +29,12 @@ Shared comparison links contain dates/pins, never private notebook text. Notes s
 
 ```sh
 node --test tests/*.test.mjs
-python Tools/audit_web.py --check
-python -m pip install -r pipeline/test-requirements.txt
-python pipeline/tests/test_pipeline.py
+python3 Tools/audit_web.py --check
+python3 -m pip install -r pipeline/test-requirements.txt
+python3 pipeline/tests/test_pipeline.py
 ```
 
-Observed locally: **53 Node tests**, **10 synthetic-product pipeline tests**, and **222 matching bundled-file fingerprints**.
+Observed locally: **61 Node tests**, **10 synthetic-product pipeline tests**, and **224 matching bundled-file fingerprints**.
 CI runs these same checks on pushes and pull requests. The pipeline source is included with only filesystem-path
 adaptations for this repository's flat web layout; its scientific processing is unchanged. Earthdata credentials are
 needed only for optional full-product retrieval, never for the bundled demo or synthetic tests.
@@ -50,7 +50,7 @@ and remains unresolved. Delta HH/HV images are qualitative previews, not a verif
 - [Current project/submission notes and prior-work disclosure](docs/SUBMISSION_2026_CURRENT.md)
 - [Game implementation](docs/GAME_IMPLEMENTATION.md)
 - [Original Journey art provenance](assets/journey/ART_DIRECTION.md)
-- [Original game art provenance](assets/game/ART_DIRECTION.md)
+- [Field mission integration and artwork](docs/GAME_IMPLEMENTATION.md)
 
 ![Actual Observation Desk screenshot](docs/previews/investigate-desktop.jpg)
 

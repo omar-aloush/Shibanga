@@ -1,102 +1,59 @@
-# Delta Dispatch — delivered playable adventure
+# A Changing Frontier — Astrounit in the full explorer
 
-Implemented **7 November 2026** in the existing Fringe checkout. English-only web feature; no public deployment or iOS changes.
+Updated 9 November 2026. The former adventure and its separate map have been retired. The welcome and eight-scene briefing now hand off to the existing explorer's single Leaflet map.
 
-## The playable mission
+## Entry and controls
 
-Control an original field scout with **Echo**, a small floating radar companion. Explore a 40 × 28-tile Delta-inspired training
-world with collision, paths, canals, bridges, crop fields, palms, buildings and optional field-note discoveries.
+First ordinary visits open the briefing. Completing it selects the Nile Delta and enables **Explore as Astrounit**; skipping returns to normal exploration without resetting the existing layer/date. Guide replays the briefing. The old Mission tab is removed; legacy `#game` links activate piloting on Map.
 
-1. Head north-west and use a radar pulse to reveal the lost relay under the clouds. Approach and reconnect it.
-2. Walk to the time relay. Capture survey A and survey B at the same location; duplicate captures cannot power the bridge.
-   Switching survey changes the north-east field. The paired-date relay restores the north bridge.
-3. Cross east and collect the independent field record at the gauge.
-4. Return to the research station and deliver all three evidence items. Optional notes are never required for completion.
+Map tools offer the Astrounit toggle. WASD/arrows, a touch joystick and map taps move the guide; Walk / Inspect switches map taps between movement and the existing inspection behavior. Place markers and Events fast-travel through the existing selection function. Following starts enabled, manual dragging releases it, and Follow Astrounit restores it.
 
-This is a real movement-and-interaction game: collision blocks water/buildings, the mission has dependencies, and actions require
-proximity. It has no multiple-choice questions. There is no damage timer or punishment for exploring. 5–8 minutes is an estimated
-comfortable exploration duration, not a measured user-study median.
+The map dock introduces the recognized region after 600 milliseconds of stable entry. Regional stories follow the astronaut throughout the map. The ten original field missions retain their navigation areas (half the configured extent, with a 120% exit threshold) for place-specific story and evidence actions. These areas are navigation aids, not scientific footprints. Nearby field missions remain available in a collapsed list.
 
-The island, survey A/B, relay-powered bridge and readings are fictional. Those labels stay visible. Completion introduces the
-actual indexed Delta HH/HV previews, with dates, attribution and provisional/qualitative limits. Changing the actual preview date
-and opening the explorer preserves that date, with map playback paused and optional tips over the real controls.
+Regional text comes from sourced geographic context and exact-entity Wikipedia excerpts; original `TOURS` introductions remain the fallback when the regional atlas cannot load. Arrivals never select a dataset, layer, date or camera position. Explicit actions offer Read aloud, Find radar here, available local field stories and (only for the supported Nile Delta workspace) Compare visits. Comparison opens the actual first and last indexed GCOV acquisition dates.
 
-## Where to open it
+## Implementation
 
-Run from the repository root:
+- `app.js` owns the only `L.map`, its frame loop, data selection, evidence actions and views.
+- `scout-controller.js` attaches a directional Astrounit marker and dock to that map. It exposes activation, positioning, frame updates, refresh and cleanup. It never creates a map or selects data on an arrival.
+- `scout-core.js` supplies geographic distance, documented story areas, dwell/hysteresis/session tracking and bounded Web Mercator movement with world wrapping.
+- `scout.css` reserves separate space for artwork, text, navigation and evidence controls. The compact event card retains layer tools and the timeline.
+- `mission.html`, `mission-layout.css` and `mission-controller.js` provide the same welcome and eight scenes in the app and standalone preview. The controller's `onExplore({eventId, robotMode})` callback hands off to the explorer; it has no map runtime.
+- `mission.js` lazily mounts the briefing in a Shadow DOM, isolates its theme and handles loading/retry/cleanup. `mission-routing.js` retains first-visit policy and legacy destination parsing.
 
-```text
-python -m http.server 5173 --directory web
-```
+Movement is suspended in other views, the globe, details, full-story playback, dialogs and hidden-page states. Keys, targets and touch vectors are cleared on suspension, avoiding background jumps. Native text/range inputs and tab navigation retain their controls. Disabling piloting restores Leaflet keyboard navigation; cleanup removes listeners, marker and dock. Existing local notes, visited preferences and old discovery records remain untouched.
 
-Open **http://localhost:5173/#game**. Entry points also include the **Play** tab, **Play Delta Dispatch** on the cinematic
-landing and **Guide → Play the adventure**. The existing Journey, #learn alias, globe, reports, comparisons and lab remain available.
-
-## Controls and accessibility
-
-- Move: WASD / arrows, touch direction buttons, or click/tap walkable ground.
-- Radar pulse: Space or the labelled button, with a short cooldown.
-- Interact: E or the contextual action button beside a relay, gauge, station or note.
-- Survey A/B: T or the survey button after restoring the first relay.
-- Follow Echo: optional pathfinding assistance through the same collision grid. It walks rather than teleports and never collects
-  evidence for the player. Manual movement cancels the route. Echo announces arrival and gives contextual hints.
-- Escape / Pause: stop simulation and sound. Help/journal use a native modal dialog. Sound is optional; reduced motion limits
-  decorative animation. Backgrounding pauses the expedition. No login, telemetry, new framework or game engine was added.
-- The field journal records discoveries and clearly separates the fictional case from the actual data. It never exports game readings
-  as real scientific observations.
-
-Local checkpoints and game sound use **fringe.delta-dispatch.v1**. Continue recovers position and evidence. New expedition asks
-before clearing this game's checkpoint. Storage failure leaves a session playable. Inactive views are inert and audio fades/suspends.
+Illustrated artwork stays separate from scientific observations. The existing four-pose atlas is shared at `assets/mission/astrounit.webp`; the orbital backdrop remains in the briefing template. No new generated scientific imagery is used.
 
 ## Verification
 
-**42/42 Node tests passed**, with dependency-free Node.js:
+Run `node --test tests/*.test.mjs` and `python3 Tools/audit_web.py --check`. The tests cover the ten areas, 600 ms dwell, 120% exit boundary, session suppression, manual replay, pause/relocation reset, nearest stories, normalized movement, capped frame deltas, target arrival, wrapping and latitude bounds. Existing source/date/report/notebook tests remain included.
 
-```text
-node --test web/tests/*.test.mjs
-```
+Browser checks cover fresh entry, eight-scene interactions, deployment to the full map, skip/replay, legacy links, layer/date preservation, Walk / Inspect, follow release/restoration, site fast travel and story/evidence actions. The responsive matrix uses 1280×720, 1440×900, 1024×768, 900×600, 768×1024, 390×844, 320×568 and 1920×1080. The failure fixture exercises unavailable storage/audio and optional missing previews/template.
 
-Fourteen game tests cover the full mission through actual collision paths, water/building/bridge blocking, proximity and survey gates,
-manual navigation cancellation, diagonal speed, capped frame gaps, pulse cooldown, checkpoint recovery and optional notes. The
-28 existing journey/science/audio tests remain, including the actual Central Valley baseline and historical GNSS distinction.
+## Continuous regional storytelling
 
-Browser checks used the actual UI, without modifying game state in the production page:
+Astrounit now recognizes the region beneath his feet throughout the map. The
+primary dock follows real administrative boundaries and named landscapes/waters,
+rather than becoming a nearby-target list after leaving the ten field missions.
+A local spatial index resolves the bundled Natural Earth gazetteer; 600 ms stable
+entry and a 220 ms sampling interval prevent rapid boundary chatter. Region
+recognition follows the astronaut's position, never the camera centre.
 
-- Completed the mission from Start to delivery: movement, pulse discovery, reconnect, paired dates, bridge crossing, field check and return.
-- Used keyboard movement/actions and pointer-held mobile direction controls; inspected the changing world at both survey states.
-- Reloaded after a partial mission and continued from the saved position, captured date and quest stage.
-- Exercised pause/resume, help/journal, new-game confirmation and cancellation, sound toggling and audio stopping at completion/exit.
-- Confirmed that an unchanged older tab does not overwrite a newer saved preference when closed. The same snapshot guard prevents stale inactive checkpoint writes.
-- Clicked a field-note location to walk there, collected it and inspected the actual journal entry. The paused exploration clock stayed unchanged during inspection.
-- Confirmed the finale's actual preview date changes and the real-map handoff retains the selected date with Play paused.
-- Inspected desktop **1280 × 720** and mobile **390 × 844**, with no horizontal overflow at the inspected mobile width.
-- Checked console warnings/errors on the normal path. No new external services are needed for gameplay.
-- Ran the deliberate failure server below: movement and map exit still work with unavailable AudioContext and throwing localStorage.
-- Ran the completed-checkpoint fixture below: a missing real preview displays an explanation and leaves the explorer action available.
-  That fixture isolates failure UI; the normal mission walkthrough above was completed through the real controls.
+`region-resolver.js` handles polygon interiors/holes, the spatial index, world
+wrapping and stable entry. `region-stories.js` provides sourced local context and
+optional exact-entity Wikipedia excerpts. Excerpts retain article/license links,
+are cached with optional storage, and reject mismatched entities. Requests are
+throttled and obsolete requests are aborted on a new region, suspension or cleanup.
+The local atlas is lazy-loaded; movement remains available while it loads.
 
-```text
-python web/tests/serve-failure-fixture.py
-python web/tests/serve-failure-fixture.py --port 5175 --completed-game
-```
+The current region and **Selected map data** are labeled separately. A regional
+arrival never changes the map dataset, mode or acquisition date. **Find radar here**
+explicitly opens the explorer's existing public-catalogue tool at the astronaut's
+position. The original field missions remain available in a collapsed nearby list
+and expose their specific evidence actions when the astronaut is inside their area.
 
-Default fixture: localhost:5174/#game. Completed checkpoint/image-failure fixture: localhost:5175/#game. These servers modify only
-served test HTML; production files and real observation data stay intact. Stop each test server with Ctrl+C.
-
-Viewport/pointer simulation is not a physical-device, all-browser or full screen-reader audit. Reduced-motion source paths were
-reviewed; no OS preference was changed. Browser QA is not proof that users enjoy the game or learn from it. No new scientific
-processing or independent field validation was performed. The real Central Valley result remains unresolved.
-
-## Art, source and previews
-
-- `web/game-core.js`: pure deterministic rules, collision, checkpoint and navigation.
-- `web/game-renderer.js`: original code-native pixel tiles/sprites, cached worlds, camera and mini-map.
-- `web/game.js`, `web/game.css`: runtime, input, Echo, audio, accessible controls, journal and actual-data finale.
-- `web/assets/game/delta-dispatch.webp`: original image_gen title key art, **327,414 bytes**, lazy-loaded on Play.
-- `web/assets/game/ART_DIRECTION.md`: complete final prompt, original/final paths and tool/compression attribution.
-- `web/tests/game.test.mjs`: the game rule and completion checks.
-- `game-title-desktop.png`, `game-play-desktop.png`, `game-mobile.png`, `game-complete.png`: observed UI previews.
-- `GAME_AND_AWARDS.md`: dated official-source review, award directions and readiness gaps.
-
-The art, code and text are AI-assisted contributions. The team must preserve a truthful contribution/history disclosure for any
-actual competition entry. The prior-work eligibility concern is documented; no organizer inquiry or submission was sent.
+Coverage and attribution are documented in `data/geography/README.md`. Geography
+is approximate; detailed online history needs connectivity, while local region and
+landscape context remains available offline after the atlas has loaded. The QA
+fixture supports `--fail-regional-stories` and `--fail-regional-map` for these cases.
